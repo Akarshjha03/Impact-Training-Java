@@ -2,7 +2,7 @@
 // if n is even and in the inclusive range of 2 to 5, print not weird
 // if n is even and in the inclusive range of 6 to 20, print weird
 // if n is even and greater than 20, print not weird
-package Day2;
+//package Day2;
 
 import java.util.*;
 public class wierd {

@@ -1,4 +1,4 @@
-package Day2;
+//package Day2;
 //code to check wheater a number is trendy or not 
 // Trendy - if it has 3 digits and the middle digit is divisible by 3
 import java.util.*;

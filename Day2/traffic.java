@@ -1,6 +1,6 @@
 //Homework
 
-package Day2;
+//package Day2;
 
 public class traffic {
     
