@@ -1,6 +1,6 @@
 // This program reverses a 3-digit integer.
 // It extracts the last, middle, and first digits of the number
-package Day2;
+//package Day2;
 
 public class ReverseInt {
     

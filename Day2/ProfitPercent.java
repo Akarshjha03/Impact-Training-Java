@@ -2,7 +2,7 @@
 //calculate the profit percent of each person and print it out
 //the remaining should be divided by 3 to equally distribution to other 3 persons
 
-package Day2;
+//package Day2;
 
 import java.util.*;
 
