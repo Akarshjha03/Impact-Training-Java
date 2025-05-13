@@ -1,55 +1,36 @@
-package Day3;
+package Day6;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class RemoveDuplicate {
-    public static void main(String args[]) {
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Array Size: ");
+        int n = sc.nextInt();
 
-        System.out.print("Enter the number of elements in the array: ");
-        int n = scanner.nextInt();
-
-        int[] array = new int[n];
-        System.out.println("Enter the elements of the array:");
+        int[] arr = new int[n];
+        System.out.println("Enter Elements:");
         for (int i = 0; i < n; i++) {
-            array[i] = scanner.nextInt();
+            arr[i] = sc.nextInt();
         }
 
-        int[] uniqueArray = removeDuplicates(array);
-        System.out.println("Array after removing duplicates:");
-        for (int num : uniqueArray) {
-            System.out.print(num + " ");
-        }
-    }
-
-    public static int[] removeDuplicates(int[] array) {
-        int n = array.length;
-        int[] temp = new int[n];
-        int index = 0;
-
-        for (int i = 0; i < n; i++) {
-            boolean isDuplicate = false;
-
-            // Check if the current element already exists in the temp array
-            for (int j = 0; j < index; j++) {
-                if (array[i] == temp[j]) {
-                    isDuplicate = true;
-                    break;
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                 }
             }
+        }
 
-            // If not a duplicate, add it to the temp array
-            if (!isDuplicate) {
-                temp[index++] = array[i];
+        System.out.print("Array after removing duplicates: ");
+        for (int i = 0; i < arr.length; i++) {
+            if (i == 0 || arr[i] != arr[i - 1]) {
+                System.out.print(arr[i] + " ");
             }
         }
 
-        // Create a new array with the exact size of unique elements
-        int[] uniqueArray = new int[index];
-        for (int i = 0; i < index; i++) {
-            uniqueArray[i] = temp[i];
-        }
-
-        return uniqueArray;
-    }
+        sc.close();
+    } 
 }

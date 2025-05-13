@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class insertion {
     public static void main(String[] args) {
-        
+
         Scanner sc = new Scanner(System.in);
         int[] cards = new int[6];
         int[] original = {10, 20, 30, 40, 50};
@@ -33,6 +33,8 @@ public class insertion {
         for (int i = 0; i < 6; i++) {
             System.out.print(cards[i] + " ");
         }
+
+        sc.close();
     }
 }
 
